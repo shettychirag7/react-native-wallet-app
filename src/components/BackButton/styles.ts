@@ -2,17 +2,13 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    height: 44,
+    width: 44,
+    borderRadius: 22,
+    backgroundColor: '#bdbdbd',
+    opacity: 0.8,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  title: {
-    lineHeight: 24,
-    fontSize: 16,
-    marginVertical: 8,
-  },
-  transactions: {
-    color: '#2b6cd8',
   },
 });
 

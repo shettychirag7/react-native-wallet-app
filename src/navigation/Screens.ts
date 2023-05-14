@@ -4,6 +4,7 @@ enum Screen {
   Buy = 'Buy',
   Scanner = 'Scanner',
   Transactions = 'Transactions',
+  TransactionDetails = 'TransactionDetails',
   Profile = 'Profile',
   Notification = 'Notification',
 }
