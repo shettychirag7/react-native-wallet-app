@@ -7,7 +7,8 @@
     "ios": "react-native run-ios --simulator=\"iPhone 14 Pro\"",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "TZ=UTC jest --verbose --coverage"
+    "test": "TZ=UTC jest --verbose --coverage",
+    "test:update": "jest -u"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.7",

@@ -11,11 +11,12 @@ import Scanner from '../screens/scanner';
 
 import ScannerIcon from '../assets/images/scanner_icon.svg';
 
+import {RootStackParamList} from './types';
 import Screen from './Screens';
 import {getIconName} from './helpers';
 import styles from './styles';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<RootStackParamList>();
 
 const getScreenOptions = ({route}: {route: RouteProp<ParamListBase>}) => ({
   tabBarIcon: ({focused}: {focused: boolean}) => {

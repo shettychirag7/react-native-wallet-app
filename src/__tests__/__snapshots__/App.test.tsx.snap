@@ -89,7 +89,7 @@ exports[`should render app with errors and match initial snapshot 1`] = `
                   "flex": 1,
                 },
                 {
-                  "backgroundColor": "rgb(242, 242, 242)",
+                  "backgroundColor": "white",
                 },
                 undefined,
               ]
@@ -142,7 +142,7 @@ exports[`should render app with errors and match initial snapshot 1`] = `
                     style={
                       [
                         {
-                          "backgroundColor": "rgb(242, 242, 242)",
+                          "backgroundColor": "white",
                           "flex": 1,
                         },
                         [
