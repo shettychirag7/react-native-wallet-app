@@ -7,6 +7,7 @@ import BackButton from '../../../components/BackButton';
 import {RootStackParamList} from '../../../navigation/types';
 import Screen from '../../../navigation/Screens';
 
+import R from '../../../assets';
 import styles from './styles';
 
 type Props = NativeStackScreenProps<
@@ -23,8 +24,11 @@ const TransactionDetails = ({route, navigation}: Props) => {
         style={styles.backButton}
         onPress={() => navigation.goBack()}
       />
-      <Text style={styles.title}>Transactions screen</Text>
-      <Text style={styles.title}>{`Transaction ID is ${txnId}`}</Text>
+      <Text style={styles.title}>{R.strings.transactions.details.title}</Text>
+      <Text
+        style={
+          styles.title
+        }>{`${R.strings.transactions.details.label} ${txnId}`}</Text>
     </View>
   );
 };

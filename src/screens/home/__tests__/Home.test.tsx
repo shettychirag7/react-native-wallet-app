@@ -1,6 +1,9 @@
 import React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 
+import R from '../../../assets';
+
+import Screen from '../../../navigation/Screens';
 import Home from '../';
 
 describe('Home screen tests', () => {
@@ -15,7 +18,7 @@ describe('Home screen tests', () => {
       />,
     );
 
-    expect(getByText('Go to Notifications')).toBeDefined();
+    expect(getByText(R.strings.notifications.link)).toBeDefined();
   });
 
   it('should navigate to notifications screen', () => {
@@ -30,8 +33,8 @@ describe('Home screen tests', () => {
       />,
     );
 
-    fireEvent.press(getByText('Go to Notifications'));
+    fireEvent.press(getByText(R.strings.notifications.link));
 
-    expect(navigateMock).toHaveBeenCalledWith('Notification');
+    expect(navigateMock).toHaveBeenCalledWith(Screen.Notification);
   });
 });

@@ -12,6 +12,7 @@ import Screen from '../../navigation/Screens';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../navigation/types';
 
+import R from '../../assets';
 import styles from './styles';
 
 type NavigationProps = NativeStackScreenProps<
@@ -37,7 +38,7 @@ const Transactions = ({navigation}: {navigation: NavigationProps}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Transactions Screen</Text>
+      <Text style={styles.title}>{R.strings.transactions.title}</Text>
       {transactions.map(transaction => (
         <TouchableOpacity
           key={transaction.id}
@@ -46,7 +47,7 @@ const Transactions = ({navigation}: {navigation: NavigationProps}) => {
             style={[
               styles.title,
               styles.transactions,
-            ]}>{`Transaction ${transaction.id}`}</Text>
+            ]}>{`${R.strings.transactions.label} ${transaction.id}`}</Text>
         </TouchableOpacity>
       ))}
     </View>

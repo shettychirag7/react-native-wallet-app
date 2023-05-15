@@ -3,6 +3,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {fireEvent, render} from '@testing-library/react-native';
 import {renderWithStore, waitFor} from 'utils/tests';
 
+import R from '../../assets';
+
 import MainStackNavigation from '../MainStackNavigation';
 
 describe('Navigation test', () => {
@@ -13,7 +15,7 @@ describe('Navigation test', () => {
       </NavigationContainer>,
     );
 
-    expect(getByText('Home Screen')).toBeDefined();
+    expect(getByText(R.strings.home.title)).toBeDefined();
   });
 
   it('should render buy screen on click buy tab', () => {
@@ -25,7 +27,7 @@ describe('Navigation test', () => {
 
     fireEvent.press(getAllByTestId('icon_storefront')[0]);
 
-    expect(getByText('Buy screen')).toBeDefined();
+    expect(getByText(R.strings.buy.title)).toBeDefined();
   });
 
   it('should render transaction screen on click payments tab', async () => {
@@ -39,7 +41,7 @@ describe('Navigation test', () => {
     fireEvent.press(getAllByTestId('icon_payments')[0]);
 
     await waitFor(() => {
-      expect(getByText('Transactions Screen')).toBeDefined();
+      expect(getByText(R.strings.transactions.title)).toBeDefined();
     });
   });
 
@@ -52,6 +54,6 @@ describe('Navigation test', () => {
 
     fireEvent.press(getAllByTestId('icon_person')[0]);
 
-    expect(getByText('Profile screen')).toBeDefined();
+    expect(getByText(R.strings.profile.title)).toBeDefined();
   });
 });

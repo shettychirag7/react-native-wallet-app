@@ -3,6 +3,8 @@ import {Text, TouchableOpacity, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
+import R from '../../assets';
+
 import {
   TransactionList,
   getAllTransactions,
@@ -46,7 +48,7 @@ const Notifications = ({navigation}: {navigation: NavigationProps}) => {
         style={styles.backButton}
         onPress={() => navigation.goBack()}
       />
-      <Text style={styles.title}>Notifications Screen</Text>
+      <Text style={styles.title}>{R.strings.notifications.title}</Text>
       {unreadTxns.length > 0 &&
         unreadTxns?.map(transaction => (
           <TouchableOpacity
@@ -56,7 +58,7 @@ const Notifications = ({navigation}: {navigation: NavigationProps}) => {
               style={[
                 styles.title,
                 styles.transactions,
-              ]}>{`Unread notification - Transaction ID ${transaction.id}`}</Text>
+              ]}>{`${R.strings.notifications.label} ${transaction.id}`}</Text>
           </TouchableOpacity>
         ))}
     </View>
