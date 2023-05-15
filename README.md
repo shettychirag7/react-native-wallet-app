@@ -41,3 +41,7 @@ More details on setting up environment can be found here: https://reactnative.de
 ### Run Unit Tests
 
 > yarn test
+
+### Screenshots & App Playback
+
+Screenshots and App playback can be found under the docs/ directory.
