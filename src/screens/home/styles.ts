@@ -6,6 +6,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  title: {
+    lineHeight: 24,
+    fontSize: 16,
+    marginVertical: 8,
+  },
+  link: {
+    color: '#2b6cd8',
+  },
 });
 
 export default styles;

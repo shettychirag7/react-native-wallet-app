@@ -13,7 +13,7 @@ describe('Navigation test', () => {
       </NavigationContainer>,
     );
 
-    expect(getByText('Home!')).toBeDefined();
+    expect(getByText('Home Screen')).toBeDefined();
   });
 
   it('should render buy screen on click buy tab', () => {

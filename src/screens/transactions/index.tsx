@@ -2,14 +2,17 @@ import React, {useEffect} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
-import {getAllTransactions} from '../../redux/reducers/transactions';
+import {
+  TransactionList,
+  getAllTransactions,
+} from '../../redux/reducers/transactions';
 import {RootState} from '../../redux/store';
-import {TransactionsState} from '../../redux/reducers/transactions';
+
 import Screen from '../../navigation/Screens';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../navigation/types';
 
 import styles from './styles';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from 'navigation/types';
 
 type NavigationProps = NativeStackScreenProps<
   RootStackParamList,
@@ -17,14 +20,14 @@ type NavigationProps = NativeStackScreenProps<
 >['navigation'];
 
 const Transactions = ({navigation}: {navigation: NavigationProps}) => {
-  const {transactions} = useSelector<RootState, TransactionsState>(
-    s => s.transactions,
+  const transactions = useSelector<RootState, TransactionList>(
+    s => s.transactions.transactions,
   );
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllTransactions());
-  }, [dispatch]);
+    transactions.length === 0 && dispatch(getAllTransactions());
+  }, [dispatch, transactions]);
 
   const onPressTransaction = (txnId: string) => {
     navigation.navigate(Screen.TransactionDetails, {

@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {TransactionDto} from '../../../api/transactions/interface';
 
-type TransactionList = TransactionDto['transactions'];
+export type TransactionList = TransactionDto['transactions'];
 
 export interface TransactionsState {
   loading: boolean;
