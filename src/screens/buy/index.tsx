@@ -6,7 +6,7 @@ import styles from './styles';
 const Buy = () => {
   return (
     <View style={styles.container}>
-      <Text>Buy!</Text>
+      <Text>Buy screen</Text>
     </View>
   );
 };

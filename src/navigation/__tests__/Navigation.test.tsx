@@ -25,7 +25,7 @@ describe('Navigation test', () => {
 
     fireEvent.press(getAllByTestId('icon_storefront')[0]);
 
-    expect(getByText('Buy!')).toBeDefined();
+    expect(getByText('Buy screen')).toBeDefined();
   });
 
   it('should render transaction screen on click payments tab', async () => {
@@ -52,6 +52,6 @@ describe('Navigation test', () => {
 
     fireEvent.press(getAllByTestId('icon_person')[0]);
 
-    expect(getByText('Profile!')).toBeDefined();
+    expect(getByText('Profile screen')).toBeDefined();
   });
 });

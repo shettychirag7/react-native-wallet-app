@@ -1,12 +1,26 @@
-import * as React from 'react';
-import {Text, View} from 'react-native';
+import React from 'react';
+import {Text, TouchableOpacity, View} from 'react-native';
+
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+
+import {RootStackParamList} from '../../navigation/types';
+import Screen from '../../navigation/Screens';
 
 import styles from './styles';
 
-const Profile = () => {
+type NavigationProps = NativeStackScreenProps<
+  RootStackParamList,
+  Screen.Profile
+>['navigation'];
+
+const Profile = ({navigation}: {navigation: NavigationProps}) => {
   return (
     <View style={styles.container}>
-      <Text>Profile!</Text>
+      <Text style={styles.title}>Profile screen</Text>
+      <TouchableOpacity
+        onPress={() => navigation.navigate(Screen.Notification)}>
+        <Text style={[styles.title, styles.link]}>Go to notifications</Text>
+      </TouchableOpacity>
     </View>
   );
 };

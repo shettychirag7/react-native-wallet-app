@@ -1,7 +1,12 @@
 import React from 'react';
 
+import Buy from '..';
+import {render} from '@testing-library/react-native';
+
 describe('Buy screen tests', () => {
   it('should render correctly', () => {
-    expect(1).toEqual(1);
+    const {getByText} = render(<Buy />);
+
+    expect(getByText('Buy screen')).toBeDefined();
   });
 });
