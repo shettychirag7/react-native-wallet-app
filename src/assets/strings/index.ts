@@ -6,16 +6,19 @@ export default {
     title: 'Buy screen',
   },
   transactions: {
+    details: {
+      title: 'Transaction screen',
+      label: 'Transaction ID is',
+    },
     title: 'Transactions screen',
     label: 'Transaction',
-    details: 'Transaction ID is',
   },
   profile: {
     title: 'Profile screen',
   },
   notifications: {
     link: 'Go to notifications',
-    title: 'Notifications Screen',
+    title: 'Notifications screen',
     label: 'Unread notification - Transaction ID',
   },
 };

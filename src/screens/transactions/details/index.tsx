@@ -24,11 +24,11 @@ const TransactionDetails = ({route, navigation}: Props) => {
         style={styles.backButton}
         onPress={() => navigation.goBack()}
       />
-      <Text style={styles.title}>{R.strings.transactions.title}</Text>
+      <Text style={styles.title}>{R.strings.transactions.details.title}</Text>
       <Text
         style={
           styles.title
-        }>{`${R.strings.transactions.details} ${txnId}`}</Text>
+        }>{`${R.strings.transactions.details.label} ${txnId}`}</Text>
     </View>
   );
 };
