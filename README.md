@@ -4,7 +4,7 @@ A React native project demonstrating a skeleton wallet app features built using 
 
 This project uses Redux for state management, react navigation V6 for handling navigation, sagas for async tasks.
 
-<img src="https://github.com/shettychirag7/react-native-wallet-app/blob/main/docs/wallet-app-demo.gif" width="168.75" height="300" alt="demo-gif" />
+<img src="https://github.com/shettychirag7/react-native-wallet-app/blob/main/docs/wallet-app-demo.gif" width="200" height="440" alt="demo-gif" />
 
 ### Key highlights of project
 
